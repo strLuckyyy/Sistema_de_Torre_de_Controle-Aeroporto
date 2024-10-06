@@ -1,6 +1,5 @@
 package Model;
 
-import java.io.Console;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -12,9 +11,7 @@ public class TowerControl {
     }
 
     public void AddLandQueue(){
-        System.out.println("Digite o identificador do avião (Ex: Avião 001):");
-        String airPlaneId = new Scanner(System.in).nextLine();
-        AirplaneModel airPlane = new AirplaneModel(airPlaneId);
+        AirplaneModel airPlane = CreateAirplane();
         _waitingForLand.add(airPlane);
     }
 
@@ -55,6 +52,14 @@ public class TowerControl {
         seconds -= 1;
 
         Countdown(seconds);
+    }
+
+    private AirplaneModel CreateAirplane(){
+        System.out.println("Digite o identificador do avião (Ex: Avião 001):");
+        String airPlaneId = new Scanner(System.in).nextLine();
+        System.out.println("Digite o tipo da aeronave (Ex: Avião 001):");
+        String airplaneType = new Scanner(System.in).nextLine();
+        return new AirplaneModel(airPlaneId, airplaneType);
     }
 
     public int ShowControls(){
