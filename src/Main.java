@@ -11,10 +11,13 @@ public class Main {
 
             switch (operator){
                 case 1:
-                case 3:
+                    tc.AddTakeoffQueue();
                     break;
                 case 2:
                     tc.AddLandQueue();
+                    break;
+                case 3:
+                    tc.Takeoff();
                     break;
                 case 4:
                     tc.Land();
@@ -27,6 +30,5 @@ public class Main {
                     break;
             }
         }
-
     }
 }

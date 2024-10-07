@@ -9,4 +9,8 @@ public class AirplaneModel {
         Id = id;
         Type = type;
     }
+
+    public void str(){
+        System.out.println("Id: " + Id + " | " + "Operação: " + Type);
+    }
 }
