@@ -48,12 +48,12 @@ public class TowerControl {
 
     public void ShowAirportStatus(){
 
-        planeInfo(_waitingForLand, "pouso");
+        PlaneInfo(_waitingForLand, "pouso");
 
-        planeInfo(_waitingForTakeoff, "decolagem");
+        PlaneInfo(_waitingForTakeoff, "decolagem");
     }
 
-    private void planeInfo(LinkedList<AirplaneModel> list, String operation){
+    private void PlaneInfo(LinkedList<AirplaneModel> list, String operation){
 
         int size = list.size();
         String planeText = size > 1 ? "aviões" : "avião";
@@ -61,7 +61,7 @@ public class TowerControl {
         System.out.println("\nHá atualmente " + size + " " + planeText + " na fila de " + operation + ".");
 
         for(int i = 0; i < size; i++){
-            list.get(i).str();
+            System.out.println(list.get(i));
         }
     }
 

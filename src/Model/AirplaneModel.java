@@ -10,7 +10,8 @@ public class AirplaneModel {
         Type = type;
     }
 
-    public void str(){
-        System.out.println("Id: " + Id + " | " + "Operação: " + Type);
+    @Override
+    public String toString() {
+        return "Id: " + Id + " | " + "Operação: " + Type;
     }
 }
